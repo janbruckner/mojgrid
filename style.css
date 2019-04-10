@@ -1,0 +1,158 @@
+
+body {background: #eeeeee;
+font-family: Arial, Helvetica, sans-serif
+}
+
+main {
+
+    width: 600px;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-rows: 80px 150px auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "article logo logo"
+    "article aside1 aside"
+    
+}
+
+header {
+   background: #f7e3d3;
+   grid-area: header;   
+   text-align: center;
+   font-size: 12px;
+   border-radius: 1px;
+   padding: 0px 0px;
+}
+
+article {
+background: #eeeeee;
+grid-area: article;
+display: flex;
+flex-direction: column;
+}
+
+.text1 {
+    border-bottom: lightgrey;
+    text-align: left;
+    color:lightslategray
+
+}
+
+.texty {
+    border-bottom: 1px solid #aaaaaa;
+    border-radius: 1px;
+    padding: 10px 10px;
+    
+}
+.texty:last-child{
+    border-bottom: none;
+}
+
+.texty h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.texty p {
+    margin-top: 10px;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+.texty time {
+    font-size:10px;
+    font-weight: bold;
+}
+
+#logo {
+    grid-area: logo;
+    background: #272327;
+}
+
+#logo  img { 
+    width: 100%;  
+    }
+    
+
+#nav {
+    grid-area: aside1;
+    background: #272327;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: bold;
+    
+}
+.bt1 {
+    background: #F1E4D6; 
+  padding: 30px 5px;
+  border-radius: 1px;  
+  color: black;
+
+}
+.bt2 {
+    background: #e8ab3b;
+    height: 50px;
+    padding: 30px 5px;
+    border-radius: 1px;
+
+}
+.bt3 {
+    background: #694703;
+    height: 50px;
+    padding: 30px 5px;
+    border-radius: 1px;
+
+}
+.bt4 {
+    background: #caa077;
+    height: 65px;
+    padding: 30px 5px;
+    border-radius: 1px;
+
+}
+
+footer { 
+    color: #eeeeee;
+background: #272327;
+grid-area: aside ;
+font-size: 15px;
+padding: 0 5px;
+border-radius: 1px;
+
+}
+footer p {
+    font-style: italic;
+    font-size: 11px;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    main {
+        width: 500px;
+        grid-template-rows: 100px 118px auto 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "article logo"
+        "article aside1"
+        "aside aside"      
+    
+
+    }
+
+
+@media screen and (max-width: 550px){
+    main {
+        width: 90%;
+        grid-template-rows: 100px auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "logo"
+        "article"
+        "aside1"
+        "aside"}
+    }
